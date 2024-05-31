@@ -6,29 +6,106 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin: 80px 10px;
+  margin: 0;
+  background-color: #f4f4f4;
 }
 
-video {
-  width: 40vw;
-  height: 30vw;
-  margin: 2rem;
-  background: #2c3e50;
+h1 {
+  margin: 20px 0;
+  font-size: 2.5rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 .videos {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
 }
 
-@media screen and (max-width: 600px) {
-  .videos {
-    flex-direction: column;
-  }
+.video-container {
+  margin: 10px;
+}
 
+video {
+  width: 45vw;
+  max-width: 500px;
+  height: auto;
+  background: #2c3e50;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.call-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #3498db;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:disabled {
+  background-color: #95a5a6;
+  cursor: not-allowed;
+}
+
+button:not(:disabled):hover {
+  background-color: #2980b9;
+}
+
+input {
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid #3498db;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+input:focus {
+  border-color: #2980b9;
+}
+
+@media screen and (max-width: 768px) {
   video {
     width: 90vw;
-    height: 60vw;
+    height: auto;
+  }
+
+  .call-controls {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  button, input {
+    width: 90%;
+    margin: 5px 0;
   }
 }
