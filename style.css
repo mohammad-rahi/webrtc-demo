@@ -26,4 +26,9 @@ video {
   .videos {
     flex-direction: column;
   }
+
+  video {
+    width: 90vw;
+    height: 60vw;
+  }
 }
