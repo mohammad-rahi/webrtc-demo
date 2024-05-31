@@ -21,3 +21,9 @@ video {
   align-items: center;
   justify-content: center;
 }
+
+@media screen and (max-width: 600px) {
+  .videos {
+    flex-direction: column;
+  }
+}
